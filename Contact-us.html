@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <title>Tab Name</title>
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+        <style>
+           
+           body, html {
+               height:100%;
+               margin:0;
+               background-color:rgb(255, 255, 255);
+           }
+                       
+      
+           .header_nav2 {
+            background-color: rgba(255, 255, 255,0.75);
+            overflow: hidden;
+            position: fixed; /* Set the navbar to fixed position */
+            top: 0; /* Position the navbar at the top of the page */  
+            width: 100%;     
+            box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);   
+            z-index: 9999; 
+            border-bottom:3px transparent;
+
+            }
+
+            /* Style the links inside the navigation bar */
+            .header_nav2 a {
+            float: left;
+            color: #110000;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 14px;
+            z-index: 9999;
+            border-bottom:3px transparent;
+
+            }
+            
+            .center {
+            position: fixed;
+            height: 30px;
+            padding: none;
+            top:0;
+            color: #6b3400;
+            text-decoration: none;
+            font-size: 30px;
+            font-family: 'EB Garamond';
+            font-weight: 550;
+            text-align: center;
+            left: 50%;
+            transform: translate(-50%, -100%);
+            z-index: 9999;
+            }
+        
+            .ContactUsContent {
+            position: relative;
+            height: 30px;
+            padding: none;
+            top:15%;
+            color: #000000;
+            text-decoration: none;
+            font-size: 30px;
+            font-family: 'EB Garamond';
+            font-weight: 550;
+            text-align: center;
+            left: 50%;
+            transform: translate(-50%, -100%);
+            z-index: 9999;
+            }
+
+
+            .header_nav2 a:hover:not(.active) {
+            border-bottom:3px solid rgb(100, 100, 100);
+            }
+       
+            .header_nav2 a.active {
+            border-bottom:3px solid red;
+            }
+
+            ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            }
+
+
+        </style>
+
+
+    </head>
+
+    <body>
+
+
+        <nav class="header_nav2">
+            <ul>
+                 <!--<li><a href="C:/Users/jseidema/Desktop/web_page_files/Home.html"><div class="home-image"><i class="fa fa-home"></i></div></a></li>  -->            
+                 <li><a href="C:/Users/jseidema/Desktop/web_page_files/Home.html">Home</a></li>
+                 <li><a href="C:/Users/jseidema/Desktop/web_page_files/Job-seekers.html">Job seekers</a></li>
+                <li><a href="C:/Users/jseidema/Desktop/web_page_files/Employers.html">Employers</a></li>
+                <li><a class="active" href="C:/Users/jseidema/Desktop/web_page_files/Contact-us.html">Contact us</a></li>                
+            </ul>
+        </nav>
+
+        <div class="center">
+            <p>
+                Company Name
+            </p>
+        </div>
+
+        <div class="ContactUsContent">
+            <p>
+                Content
+            </p>
+        </div>
+
+        
+                
+    </body>
+</html>

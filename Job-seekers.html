@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <title>Tab Name</title>
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+        <style>
+           
+           body, html {
+               height:100%;
+               margin:0;
+               background-color:rgb(255, 255, 255);
+           }
+                       
+            .header_nav2 {
+            background-color: rgba(255, 255, 255,0.75);
+            overflow: hidden;
+            position: fixed; /* Set the navbar to fixed position */
+            top: 0; /* Position the navbar at the top of the page */  
+            width: 100%;     
+            box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);   
+            z-index: 9999; 
+            }
+
+            /* Style the links inside the navigation bar */
+            .header_nav2 a {
+            float: left;
+            color: #110000;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 14px;
+            z-index: 9999;
+            border-bottom:3px transparent;
+
+            }
+            
+            .center {
+            position: fixed;
+            height: 30px;
+            padding: none;
+            top:0;
+            color: #6b3400;
+            text-decoration: none;
+            font-size: 30px;
+            font-family: 'EB Garamond';
+            font-weight: 550;
+            text-align: center;
+            left: 50%;
+            transform: translate(-50%, -100%);
+            z-index: 9999;
+
+            }
+        
+            .header_nav2 a:hover:not(.active) {
+            border-bottom:3px solid rgb(100, 100, 100);
+            }
+       
+            .header_nav2 a.active {
+            border-bottom:3px solid red;
+            }
+
+            form {
+            /* Center the form on the page */
+            position:relative;
+            margin: 0 auto;
+            width: 350px;
+            top:15%;
+            z-index: 9997;
+
+            }
+
+            ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            }
+
+            form li + li {
+            /* sets margins surrounding each list item/box */
+            margin-top: 1.1em;
+            }
+
+            label {
+            /* Uniform size & alignment - aligns text on right and boxes on left*/
+            display: block;
+            width: 350px;
+            text-align: left;
+            font-family: calibri;
+            font-size: 14px;
+            }
+
+            input {
+            /* To make sure that all text fields have the same font settings
+                By default, textareas have a monospace font */
+            font: 1em calibri;
+            display: block;
+
+            /* sets size of boxes/form fields */
+            width: 350px;
+            box-sizing: border-box;
+
+            /* set border width and color of form fields */
+            border: 1px solid #999;
+            border-radius: 3.5px;
+            padding: 12px; 
+
+            /* Align multiline text fields with their labels - lines up text to upper left corner*/
+            vertical-align: top;
+            /* sets height of reg boxes box */
+            height: 2.40em;
+            z-index: 9997;
+
+            }
+
+            input:focus {
+            /* Additional highlight for selected fields/boxes */
+            border-color: #000;
+            }
+
+            input[type="radio"] {
+            height: auto;
+            width: auto;
+            float: left
+            }
+            
+            input[type="file"] {
+            border:none;
+            }
+
+            ::placeholder {
+            color: rgb(0, 0, 0);
+            opacity: 0.275; /* Firefox */
+            font-family: calibri;
+            font-size: 16.0px;
+            }
+
+        </style>
+
+
+    </head>
+
+    <body>
+
+
+        <!--<div class="imgbox"> -->
+            <!--  <img class="center-fit" src="water-3050663_c1.jpg"> -->
+            <!--<img class="center-fit" src="pexels-sora-shimazaki-5673502_3.jpg"> -->
+        <!--</div> -->
+       
+        <nav class="header_nav2">
+            <ul>
+                <!--<li><a href="C:/Users/jseidema/Desktop/web_page_files/Home.html"><div class="home-image"><i class="fa fa-home"></i></div></a></li>  -->            
+                <li><a href="C:/Users/jseidema/Desktop/web_page_files/Home.html">Home</a></li>
+                <li><a class="active" href="C:/Users/jseidema/Desktop/web_page_files/Job-seekers.html">Job seekers</a></li>
+                <li><a href="C:/Users/jseidema/Desktop/web_page_files/Employers.html">Employers</a></li>
+                <li><a href="C:/Users/jseidema/Desktop/web_page_files/Contact-us.html">Contact us</a></li>                
+            </ul>
+        </nav>
+
+        <div class="center">
+            <p>
+                Company Name
+            </p>
+        </div>
+
+        <form action="/url-to-send-form-data-to" method="post">
+            <ul>
+
+            <li>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="user_name" placeholder="Name" required 
+                oninvalid="this.setCustomValidity('This field is required')"
+                oninput="this.setCustomValidity('')"/>
+            </li>
+
+            <li>
+                <label for="city">City</label>
+                <input type="text" id="city" name="user_city" placeholder="City" required 
+                oninvalid="this.setCustomValidity('This field is required')"
+                oninput="this.setCustomValidity('')"/>
+            </li>
+
+            <li>
+                <label for="state">State</label>
+                <input type="text" id="state" name="user_state" placeholder="State" required 
+                oninvalid="this.setCustomValidity('This field is required')"
+                oninput="this.setCustomValidity('')"/>
+            </li>
+
+            <li>
+                <label for="mail">E-mail</label>
+                <input type="email" id="mail" name="user_email" placeholder="E-mail" required 
+                oninvalid="this.setCustomValidity('This field is required')"
+                oninput="this.setCustomValidity('')"/>
+            </li>
+
+            <li>
+                <label for="phone">Phone number</label>
+                <input type="number" id="phone" name="phone_number" placeholder="Phone number" required 
+                oninvalid="this.setCustomValidity('This field is required')"
+                oninput="this.setCustomValidity('')"/>
+            </li>
+   
+             
+            <li>
+                <label for="current_employer">Current employer </label>
+                <input type="text" id="current_employer" name="current_employer" placeholder="Current employer" required 
+                oninvalid="this.setCustomValidity('This field is required')"
+                oninput="this.setCustomValidity('')"/>
+            </li>
+
+            <li>
+                <label for="current_Job_title">Current job title </label>
+                <input type="text" id="current_Job_title" name="current_Job_title" placeholder="Current job title" required 
+                oninvalid="this.setCustomValidity('This field is required')"
+                oninput="this.setCustomValidity('')"/>
+            </li>
+
+            <li>
+                <label for="certs">List relevant certifications, separated by comma (optional) </label>
+                <input type="text" id="certs" name="certs" placeholder="List relevant certifications, separated by comma">
+            </li>
+
+            <li>
+                <label for="education">Highest degree completed</label>
+                <select name="education" id="education" required 
+                oninvalid="this.setCustomValidity('This field is required')"
+                oninput="this.setCustomValidity('')">
+                    <option value="">--Please choose an option--</option>
+                    <option value="HS">High school diploma or equivalent</option>
+                    <option value="Associate's">Associate's</option>
+                    <option value="Bachelor's">Bachelor's</option>
+                    <option value="J.D.">J.D.</option>
+                    <option value="Master's">Master's</option>
+                    <option value="M.D.">M.D.</option>
+                    <option value="PhD">Ph.D.</option>
+                </select>
+            </li>
+
+
+            <li>
+                <label for="LinkedIn_URL">LinkedIn URL (optional) </label>
+                <input type="url" id="LinkedIn_URL" name="LinkedIn_URL" placeholder="LinkedIn URL">
+            </li>
+
+            <li>
+                <label for="Portfolio_URL">Portfolio URL (optional) </label>
+                <input type="url" id="Portfolio_URL" name="Portfolio_URL" placeholder="Portfolio URL">
+            </li>
+
+            <li>
+                <label for="Personal_website">Personal website URL (optional) </label>
+                <input type="url" id="Personal_website" name="Personal_website" placeholder="Personal website URL">
+            </li>
+
+            <li>
+                <p>Are you legally authorized to work on a full-time basis for an indefinite period of time in the U.S.?</p>
+                <input type="radio" id="YesR" name="YesR" value="YesR" checked>
+                <label for="YesR">Yes</label>
+            </li>
+
+            <li>
+                <input type="radio" id="NoR" name="NoR" value="NoR">
+                <label for="NoR">No</label>
+            </li>
+
+            <li>
+                <p>Will you now or in the future require sponsorship for employment in the U.S.?</p>
+                <input type="radio" id="SponsorshipYes" name="SponsorshipYes" value="SponsorshipYes" checked required>
+                <label for="SponsorshipYes">Yes</label>
+            </li>
+
+            <li>
+                <input type="radio" id="SponsorshipYes" name="SponsorshipYes" value="SponsorshipYes" required>
+                <label for="SponsorshipYes">No</label>
+            </li>
+
+            <li>
+                <label for="Desired_salary">Desired salary</label>
+                <select name="Desired_salary" id="Desired_salary" required 
+                oninvalid="this.setCustomValidity('This field is required')"
+                oninput="this.setCustomValidity('')">
+                    <option value="">--Please choose an option--</option>
+                    <option value="40-60">$40,000 – $60,000</option>
+                    <option value="50-70">$50,000 – $70,000</option>
+                    <option value="60-80">$60,000 – $80,000</option>
+                    <option value="70-90">$70,000 – $90,000</option>
+                    <option value="80-100">$80,000 – $100,000</option>
+                    <option value="90-110">$90,000 – $110,000</option>
+                    <option value="100-120">$100,000 – $120,000</option>
+                    <option value="110-130">$110,000 – $130,000</option>
+                    <option value="120-140">$120,000 – $140,000</option>
+                    <option value="130-150">$130,000 – $150,000</option>
+                    <option value="140-160">$140,000 – $160,000</option>
+                    <option value="150-170">$150,000 – $170,000</option>
+                    <option value="160-180">$160,000 – $180,000</option>
+                    <option value="170-190">$170,000 – $190,000</option>
+                    <option value="180-200">$180,000 – $200,000</option>
+                    <option value="190-210">$190,000 – $210,000</option>
+                    <option value="200-220">$200,000 – $220,000</option>
+                </select>
+            </li>
+
+            <form action="/action_page.php">
+                <input type="file" id="myFile" name="filename" accept=".pdf, .docx, .doc">
+            
+                <script type="text/javascript">
+                    document.getElementById("myFile").onchange = function() {
+                        // submitting the form
+                        document.getElementById("myFile").submit();
+                    };
+                </script>
+    
+            </form>
+
+            <li class="button">
+                <input type="submit">
+            </li>
+
+            </ul>
+        </form>
+
+        
+                
+    </body>
+</html>
